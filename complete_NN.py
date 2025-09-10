@@ -130,5 +130,13 @@ np.random.seed(1)
 # make some predictions 
 emily = np.array([-7, -3]) # 128 pounds , 63 inches
 frank = np.array([20,2]) # 155 pounds, 68 inches
-print("Emily: %.3f"% network.feedforward(emily)) 
+print("Emily: %.3f"% network.feedforward(emily))
+if network.feedforward(emily) >= 0.5:
+    print("emily is a girl")
+else:
+    print("emily is a boy")
 print("Frank: % .3f" % network.feedforward(frank))
+if network.feedforward(frank) >= 0.5:
+    print("Frank is a girl")
+else:
+    print("Frank is a boy")
